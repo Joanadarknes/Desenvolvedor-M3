@@ -23,3 +23,33 @@ img{
 body{
      color: var(--text-color);
 }
+.container{
+    max-width: 1068px;
+    margin: auto;
+    width: 100%;
+}
+/*header*/
+
+header
+{
+    position:fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    background:var(--bg-color);
+    box-shadow: 0 1px 4px hsl (0 4% 15% / 10%);
+}
+
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+
+}
+.logo{
+    font-size: 1.1rem;
+    color: var(--text-color);
+}
+ 
+
