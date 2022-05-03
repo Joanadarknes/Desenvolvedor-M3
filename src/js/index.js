@@ -34,7 +34,10 @@ filtrosCor.forEach(filtro => {
       filtrosDoCor.push(e.target.value);
       filtrar(filtrosDoCor, filtrosDeTamanho);
     } else {
-      
+      filtrosDoCor.forEach((filtro, index) => {
+        filtrosDoCor.splice(index, 1);
+      });
+      filtrar(filtrosDoCor, filtrosDeTamanho);
     }
   });
 });
