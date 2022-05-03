@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Desenvolvedor M3</title>
-  <link rel="stylesheet" href="main.css"/>
+  <link rel="stylesheet" href="main.css" />
   <!---icons-->
   <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
 
@@ -14,217 +14,159 @@
 
 <body>
 
-<!---header-->
-<header>
-<div class="nav container">
-  <a href="#" class="logo"><img src="./img/logo-m3.png" alt="logo-m3"></a>
- <i class='bx bxs-shopping-bag-alt' id="cart-icon"></i>
-</div>
-</header>
+  <!---header-->
+  <header>
+    <div class="nav container">
+      <a href="#" class="logo"><img src="./img/logo-m3.png" alt="logo-m3"></a>
+      <svg id="sacola" width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink">
+        <rect x="0.25" width="17" height="20" fill="url(#pattern0)" />
+        <defs>
+          <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+            <use xlink:href="#image0_17_713" transform="scale(0.0588235 0.05)" />
+          </pattern>
+          <image id="image0_17_713" width="17" height="20"
+            xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAUCAYAAABroNZJAAAAvElEQVQ4Ea2TAQ0CMQxFnwQkIAUJSMAJOAAJOAAH4ORwAA4gb1lJLnAH6faTpXdt/9+6/MF3LIAtcAauNfpv/i8sK+kAnIBLjfuat/4T7uzaAUEwKhq1WZE1cAc2E13mH4B9k3B372EO1u37gDt4cTG/31Mr7sn66MTO+kwseW9kBILTT0QDhWomFgOuGkXk00VE42TGCE4xnsaJRCYW43UROTaexIdZXmZmjOAU12YtPxK5NY4zOE4opuMLN/z2esJif9wAAAAASUVORK5CYII=" />
+          <!--Cart-->
+          <div class="cart">
+            <h2 class="card-title">Sacola</h2>
 
-<!--shop-->
-<h1 class="section-title">Blusas 
- <select name="ordernar" id="ordernar" style="width: 150px;" >
-
-  <option value="1"> ordernar por</option>
-  <option value="1"> Mais recentes</option>
-  <option value="1"> Maior preço</option>
-  <option value="1"> Menor preço</option>
- </select>  
-
-</h1>
-
-
-<div style="display: flex; width: 55%; margin: 0 auto;">
-<aside>
-<section class="shop container">
+            <!--content-->
+            <div class="cart-content">
 
 
+            </div>
+            <!--Total-->
+            <div class="total">
+              <div class="total-title" style="margin-right: 10px;">Total</div>
+              <div class="totalPrice">R$0</div>
+            </div>
 
- <h3 class="filter_title">Cores</h3>
+            <!--Buy button-->
+            <button type="button" class="btn-buy">Finalizar Compra</button>
+            <!--cart close-->
+
+            <i class='bx bx-x' id="close_cart"></i>
+
+          </div>
+      </svg>
+    </div>
+  </header>
+
+  <!--shop-->
+  <h1 class="section-title">Blusas
+    <div class="filtre-mobile">
+      <button>Filtrar</button>
+      <button>Ordernar</button>
+    </div>
 
 
-<form class="filter-colors">
-  <div class="filter-colors-div">
-  <input type="checkbox" name="color-1" id="color-1" value="Amarelo">
-  <label for="Amarelo">Amarelo</label>
-</div>
-<div class="filter-colors-div">
-  <input type="checkbox" name="color-2" id="color-2" value="Azul">
-  <label for="Azul">Azul</label>
-</div>
-  <div class="filter-colors-div">
-  <input type="checkbox" name="color-3" id="color-3" value="Branco">
-  <label for="Branco">Branco</label>
+    <select name="ordernar" id="ordernar" style="width: 150px;">
+
+      <option selected disabled> ordernar por:</option>
+      <option value="1"> Mais recentes</option>
+      <option value="2"> Maior preço</option>
+      <option value="3"> Menor preço</option>
+    </select>
+
+  </h1>
+  <div class="produtos">
+    <aside>
+      <section class="shop container">
+        <h3 class="filter_title">Cores</h3>
+
+
+        <form class="filter-colors">
+          <div class="filter-colors-div">
+            <input type="checkbox" class="filtro-cor" name="color-1" id="color-1" value="Amarelo">
+            <label for="Amarelo">Amarelo</label>
+          </div>
+          <div class="filter-colors-div">
+            <input type="checkbox" class="filtro-cor" name="color-2" id="color-2" value="Azul">
+            <label for="Azul">Azul</label>
+          </div>
+          <div class="filter-colors-div">
+            <input type="checkbox" class="filtro-cor" name="color-3" id="color-3" value="Branco">
+            <label for="Branco">Branco</label>
+          </div>
+          <div class="filter-colors-div">
+            <input type="checkbox" class="filtro-cor" name="color-4" id="color-4" value="Cinza">
+            <label for="Cinza">Cinza</label>
+          </div>
+          <div class="filter-colors-div">
+            <input type="checkbox" class="filtro-cor" name="color-5" id="color-5" value="Laranja">
+            <label for="Laranja">Laranja</label>
+          </div>
+
+          <div></div>
+
+        </form>
+
+        <h3 class="filter_title">TAMANHOS</h3>
+
+        <div class="filter-tamanho">
+          <button>P</button>
+          <button>M</button>
+          <button>G</button>
+          <button>GG</button>
+          <button>U</button>
+          <button>36</button>
+          <button>38</button>
+          <button>40</button>
+          <button>42</button>
+          <button>44</button>
+          <button>46</button>
+
+        </div>
+      </section>
+
+      <h3 class="filter_title">FAIXA DE PREÇO</h3>
+
+
+      <form class="filter-colors">
+        <div class="filter-colors-div">
+          <input type="checkbox" name="preco-1" id="preco-1" value="50">
+          <label for="Amarelo">de R$0 até R$50</label>
+        </div>
+        <div class="filter-colors-div">
+          <input type="checkbox" name="preco-2" id="preco-2" value="150">
+          <label for="Azul">de R$51 até R$150</label>
+        </div>
+        <div class="filter-colors-div">
+          <input type="checkbox" name="preco-3" id="preco-3" value="300">
+          <label for="Branco">de R$151 até R$300</label>
+        </div>
+        <div class="filter-colors-div">
+          <input type="checkbox" name="preco-4" id="preco-4" value="500">
+          <label for="Cinza">de R$301 até R$500</label>
+        </div>
+        <div class="filter-colors-div">
+          <input type="checkbox" name="preco-5" id="preco-5" value="01">
+          <label for="Laranja">a partir de R$ 01</label>
+        </div>
+
+        <div></div>
+
+      </form>
+
+    </aside>
+
+
+    <!---BOXS Que estão sendo puxado pela API-->
+    <div class="shop-content">
+
+    </div>
+    </section>
   </div>
-  <div class="filter-colors-div">
-  <input type="checkbox" name="color-4" id="color-4" value="Cinza">
-  <label for="Cinza">Cinza</label>
-</div>
-   <div class="filter-colors-div">
-  <input type="checkbox" name="color-5" id="color-5" value="Laranja">
-  <label for="Laranja">Laranja</label>
-</div>
-
-   <div></div>
-
-</form>
-
-<h3 class="filter_title">TAMANHOS</h3>
-
-<div class="filter-tamanho">
- <button>P</button>
- <button>M</button>
- <button>G</button>
- <button>GG</button>
- <button>U</button>
- <button>36</button>
- <button>38</button>
- <button>40</button>
- <button>42</button>
- <button>44</button>
- <button>46</button>
-
-</div>
-</section>
-
-<h3 class="filter_title">FAIXA DE PREÇO</h3>
-
-
-<form class="filter-colors">
-  <div class="filter-colors-div">
-  <input type="checkbox" name="color-1" id="color-1" value="Amarelo">
-  <label for="Amarelo">de R$0 até R$50</label>
-</div>
-<div class="filter-colors-div">
-  <input type="checkbox" name="color-2" id="color-2" value="Azul">
-  <label for="Azul">de R$51 até R$150</label>
-</div>
-  <div class="filter-colors-div">
-  <input type="checkbox" name="color-3" id="color-3" value="Branco">
-  <label for="Branco">de R$151 até R$300</label>
   </div>
-  <div class="filter-colors-div">
-  <input type="checkbox" name="color-4" id="color-4" value="Cinza">
-  <label for="Cinza">de R$301 até R$500</label>
-</div>
-   <div class="filter-colors-div">
-  <input type="checkbox" name="color-5" id="color-5" value="Laranja">
-  <label for="Laranja">a partir de R$ 01</label>
-</div>
-
-   <div></div>
-
-</form>
-
-</aside>
-
-
-                                          <!---BOXS-->
-
-
-<!---BOX 1-->
-
-
-<div class="shop-content">
-<div class="product-box">
-  <img src="./img/img_2.png" alt="CAMISETA MESCLA" class="product-img">
-  <h2 class="product-title">CAMISETA MESCLA</h2>
-  <span class="price">R$ 28,00</span>
-  <p>até 3x de R$9,33</p>
-  <button>COMPRAR</button>
-</div>
-<!---BOX 2-->
-
-
-  <div class="product-box">
-    <img src="./img/img_3.png" alt="CAMISETA MESCLA" class="product-img">
-    <h2 class="product-title">CAMISETA MESCLA</h2>
-    <span class="price">R$ 28,00</span>
-    <p>até 3x de R$9,33</p>
-    <button>COMPRAR</button>
   </div>
-  <!---BOX 3-->
-
-
-  <div class="product-box">
-    <img src="./img/img_4.png" alt="CAMISETA MESCLA" class="product-img">
-    <h2 class="product-title">CAMISETA MESCLA</h2>
-    <span class="price">R$ 28,00</span>
-    <p>até 3x de R$9,33</p>
-    <button>COMPRAR</button>
+  <div class="carregar-mais">
+    <button id="button-carregar-mais">CARREGAR MAIS</button>
   </div>
-  <!---BOX 4-->
 
-
-  <div class="product-box">
-    <img src="./img/img_5.png" alt="CAMISETA MESCLA" class="product-img">
-    <h2 class="product-title">CAMISETA MESCLA</h2>
-    <span class="price">R$ 28,00</span>
-    <p>até 3x de R$9,33</p>
-    <button>COMPRAR</button>
-  </div>
-  <!---BOX 5-->
-
-
-  <div class="product-box">
-    <img src="./img/img_6.png" alt="CAMISETA MESCLA" class="product-img">
-    <h2 class="product-title">CAMISETA MESCLA</h2>
-    <span class="price">R$ 28,00</span>
-    <p>até 3x de R$9,33</p>
-    <button>COMPRAR</button>
-  </div>
-  <!---BOX 6-->
-
-  <div class="product-box">
-    <img src="./img/img_7.png" alt="CAMISETA MESCLA" class="product-img">
-    <h2 class="product-title">CAMISETA MESCLA</h2>
-    <span class="price">R$ 28,00</span>
-    <p>até 3x de R$9,33</p>
-    <button>COMPRAR</button>
-  </div>
-  <!---BOX 7-->
-
-
-  <div class="product-box">
-    <img src="./img/img_8.png" alt="CAMISETA MESCLA" class="product-img">
-    <h2 class="product-title">CAMISETA MESCLA</h2>
-    <span class="price">R$ 28,00</span>
-    <p>até 3x de R$9,33</p>
-    <button>COMPRAR</button>
-  </div>
-  <!---BOX 8-->
-
-<div class="shop-content">
-  <div class="product-box">
-    <img src="./img/img_9.png" alt="CAMISETA MESCLA" class="product-img">
-    <h2 class="product-title">CAMISETA MESCLA</h2>
-    <span class="price">R$ 28,00</span>
-    <p>até 3x de R$9,33</p>
-    <button>COMPRAR</button>
-  </div>
-  <!---BOX 9-->
-  <div class="product-box">
-    <img src="./img/img_10.png" alt="CAMISETA MESCLA" class="product-img">
-    <h2 class="product-title">CAMISETA MESCLA</h2>
-    <span class="price">R$ 28,00</span>
-    <p>até 3x de R$9,33</p>
-    <button>COMPRAR</button>
-  </div>
- </section>
-</div>
-</div>
-</div>
-
-<button class="button-carregar-mais">CARREGAR MAIS</button>
-
-
-
-
-
-
-
-
+  <footer>
+    <span class="rodapé">Agência M3-Agência de performace Digital</span>
+  </footer>
 
 </body>
 <script src="bundle.js"></script>
