@@ -16,6 +16,7 @@
 
 body {
   background: #fff;
+  position: relative;
 
 }
 
@@ -42,7 +43,7 @@ header {
   justify-content: space-between;
   display: flex;
   align-items: center;
-  padding: 20px 100px;
+  padding: 20px 38px;
 }
 
 #card-icon {
@@ -169,7 +170,7 @@ header {
 .section-title {
   font-family: 'Open Sans', sans-serif;
   display: flex;
-  width: 55%;
+  width: 62%;
   text-align: left;
   margin: 0 auto;
   margin-top: 100px;
@@ -238,7 +239,7 @@ aside {
   cursor: pointer;
 }
 
-.filter-tamanho button:active {
+.filter-tamanho button.active {
   color: #000000;
   border: 1px solid #00bff3;
 }
@@ -261,7 +262,7 @@ aside {
 
 .produtos {
   display: flex;
-  width: 55%;
+  width: 62%;
   margin: 0 auto;
 }
 
@@ -341,6 +342,12 @@ p {
   font-size: 14px;
 }
 
+.filtrarMobile{
+  display: none;
+}
+.filtrarMobileOrdenar{
+  display: none;
+}
 
 /*Footer-rodapé */
 
@@ -356,9 +363,12 @@ span .rodapé {
 /*RESPONSIVE */
 @media (min-width:300px) and (max-width:700px) {
 
-  aside {
+  .esconder-mobile{
     display: none;
   }
+  aside {
+    width: 100%;
+}
 
   .product-box {
     width: 46%;
@@ -373,6 +383,7 @@ span .rodapé {
     display: flex;
     width: 100%;
     margin: unset;
+    padding-top: 20px;
   }
 
   .product-box__info {
@@ -390,9 +401,7 @@ span .rodapé {
     padding: 20px 20px;
   }
 
-  #ordernar {
-    display: none;
-  }
+
 
   .section-title {
     text-align: center;
@@ -413,11 +422,125 @@ span .rodapé {
     display: flex;
     padding: 20px;
   }
-}
+
 
 #ExcluideProduto {
   background: unset;
   border: 0;
   font-size: 20px;
   padding-left: 100px;
+}
+.filtrarMobile{
+  visibility: hidden;
+  background: rgb(255, 255, 255);
+  position: fixed;
+  left: 0;
+  top: 0px;
+  padding-top: 9px;
+  height: 100vh;
+  width: 100%;
+  transition: all 0.5s ease;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  z-index: 1000;
+  display: block;
+}
+.filter-tamanho button {
+  width: 50px;
+  height: 50px;
+  margin: 10px 10px 10px 27px;
+  background: white;
+  border: 1px solid #cbcbcb;
+  color: #cbcbcb;
+  cursor: pointer;
+}
+.filter_title {
+  font-family: "Open Sans", sans-serif;
+  margin: 10px 10px;
+  font-size: 20px;
+}
+.filter-colors {
+  display: flex;
+  flex-direction: column;
+  margin: 0 30px 10px;
+}
+.filter-colors div{
+  padding-bottom: 15px;
+}
+.filter-tamanho{
+  padding-bottom: 10px;
+}
+.closeFiltroMobile{
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 30px;
+  align-items: center;
+  border-bottom: 1px solid #8c8c8c;
+  font-family: "Open Sans", sans-serif;
+  letter-spacing: 3px;
+  color:  #8c8c8c;
+}
+#closeMobile{
+  background: none;
+  border: 0;
+  font-size: 25px;
+}
+.buttonSetas{
+  border: 0;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  background: none;  
+}
+.filter-colors {
+  display: flex;
+  flex-direction: column;
+  margin: 0 30px 10px;
+  visibility: hidden;
+  height: 0;
+}
+.filtrarMobileOrdenar{
+  visibility: hidden;
+    background: white;
+    position: fixed;
+    right: 0;
+    top: 0px;
+    padding-top: 9px;
+    height: 100vh;
+    width: 100%;
+    transition: all 0.5s ease;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    z-index: 1000;
+    display: block;
+}
+.closeFiltroMobilee{
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 30px;
+  align-items: center;
+  border-bottom: 1px solid #8c8c8c;
+  font-family: "Open Sans", sans-serif;
+  letter-spacing: 3px;
+  color:  #8c8c8c;
+}
+#closeMobilee{
+  background: none;
+  border: 0;
+  font-size: 25px;
+}
+.FiltroOrdernaar{
+padding: 20px;
+}
+.FiltroOrdernaar div{
+  padding-bottom: 20px;
+  font-family: "Open Sans", sans-serif;
+  margin: 10px 10px;
+  font-size: 20px;
+}
+.text-Ordernar{
+  padding-top: 10px;
+}
 }
