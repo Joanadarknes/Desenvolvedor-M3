@@ -54,138 +54,51 @@
 
   </header>
   <h1 class="section-title">Blusas
-    <select class="esconder-mobile" name="ordernar" id="ordernar" style="width: 150px;">
+    <select class="esconder-mobile" name="ordernar" id="ordenar" style="width: 150px;">
 
       <option selected disabled> ordernar por:</option>
-      <option value="1"> Mais recentes</option>
-      <option value="2"> Maior preço</option>
-      <option value="3"> Menor preço</option>
+      <option value="recente"> Mais recentes</option>
+      <option value="maior-preco"> Maior preço</option>
+      <option value="menor-preco"> Menor preço</option>
     </select>
- 
-  <div class="filtre-mobile">
-    <button id="AbrirFiltro">Filtrar</button>
-    <button id="AbrirOrdernar">Ordernar</button>
-  </div>
-    </h1>
 
-    <div class="filtrarMobileOrdenar">
-      <div class="closeFiltroMobilee">
-        <h2 class="text-Ordernar" >ORDERNAR</h2>
+    <div class="filtre-mobile">
+      <button id="AbrirFiltro">Filtrar</button>
+      <button id="AbrirOrdernar">Ordernar</button>
+    </div>
+  </h1>
+
+  <div class="filtrarMobileOrdenar">
+    <div class="closeFiltroMobilee">
+      <h2 class="text-Ordernar">ORDERNAR</h2>
       <button id="closeMobilee">✕</button>
     </div>
-   
+
     <div class="FiltroOrdernaar">
-      <div > Mais recentes</div>
-      <div > Maior preço</div>
-      <div > Menor preço</div>
+      <div id="recente"> Mais recentes</div>
+      <div id="maior-preco"> Maior preço</div>
+      <div id="menor-preco"> Menor preço</div>
     </div>
 
-    </div>
+  </div>
 
-    <div class="filtrarMobile">
+  <div class="filtrarMobile">
 
-      <div class="closeFiltroMobile">
-        <h2>FILTRAR</h2>
+    <div class="closeFiltroMobile">
+      <h2>FILTRAR</h2>
       <button id="closeMobile">✕</button>
     </div>
 
-      <div class="produtos">
-        <aside>
-          <section class="shop container">
-            <button id="MobileCoresButton" class="buttonSetas">             
-              <h3 class="filter_title">Cores</h3><svg width="20" height="15" viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1 1L10 14L19 1.0135" stroke="#666666" stroke-linecap="round"/>
-                </svg>   
-            </button>
-            
-            
-  
-            <form class="filter-colors">
-              <div class="filter-colors-div">
-                <input type="checkbox" class="filtro-cor" name="color-1" id="color-1" value="Amarelo">
-                <label for="Amarelo">Amarelo</label>
-              </div>
-              <div class="filter-colors-div">
-                <input type="checkbox" class="filtro-cor" name="color-2" id="color-2" value="Azul">
-                <label for="Azul">Azul</label>
-              </div>
-              <div class="filter-colors-div">
-                <input type="checkbox" class="filtro-cor" name="color-3" id="color-3" value="Branco">
-                <label for="Branco">Branco</label>
-              </div>
-              <div class="filter-colors-div">
-                <input type="checkbox" class="filtro-cor" name="color-4" id="color-4" value="Cinza">
-                <label for="Cinza">Cinza</label>
-              </div>
-              <div class="filter-colors-div">
-                <input type="checkbox" class="filtro-cor" name="color-5" id="color-5" value="Laranja">
-                <label for="Laranja">Laranja</label>
-              </div>
-  
-             
-  
-            </form>
-            <button id="MobileTamanhosButton" class="buttonSetas">
-              <h3 class="filter_title">TAMANHOS</h3><svg width="20" height="15" viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1 1L10 14L19 1.0135" stroke="#666666" stroke-linecap="round"/>
-                </svg>   
-            </button>
-            
-  
-            <div class="filter-tamanho">
-              <button>P</button>
-              <button>M</button>
-              <button>G</button>
-              <button>GG</button>
-              <button>U</button>
-              <button>36</button>
-              <button>38</button>
-              <button>40</button>
-              <button>42</button>
-              <button>44</button>
-              <button>46</button>
-  
-            </div>
-          </section>
+    <div class="produtos">
+      <aside>
+        <section class="shop container">
+          <button id="MobileCoresButton" class="buttonSetas">
+            <h3 class="filter_title">Cores</h3><svg width="20" height="15" viewBox="0 0 20 15" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 1L10 14L19 1.0135" stroke="#666666" stroke-linecap="round" />
+            </svg>
+          </button>
 
-          <button id="MobilePrecoButton" class="buttonSetas">
-          <h3 class="filter_title">FAIXA DE PREÇO</h3><svg width="20" height="15" viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M1 1L10 14L19 1.0135" stroke="#666666" stroke-linecap="round"/>
-            </svg>   
-        </button>
-  
-          <form class="filter-colors" id="filter-precoo">
-            <div class="filter-colors-div">
-              <input type="checkbox" name="preco-1" id="preco-1" value="50">
-              <label for="Amarelo">de R$0 até R$50</label>
-            </div>
-            <div class="filter-colors-div">
-              <input type="checkbox" name="preco-2" id="preco-2" value="150">
-              <label for="Azul">de R$51 até R$150</label>
-            </div>
-            <div class="filter-colors-div">
-              <input type="checkbox" name="preco-3" id="preco-3" value="300">
-              <label for="Branco">de R$151 até R$300</label>
-            </div>
-            <div class="filter-colors-div">
-              <input type="checkbox" name="preco-4" id="preco-4" value="500">
-              <label for="Cinza">de R$301 até R$500</label>
-            </div>
-            <div class="filter-colors-div">
-              <input type="checkbox" name="preco-5" id="preco-5" value="01">
-              <label for="Laranja">a partir de R$ 01</label>
-            </div>
-  
-          </form>
-  
-        </aside>
-      </div>
-    </div>
-
-    <div class="produtos" >
-      <aside class="esconder-mobile">
-        <section  class="shop container">
-          <h3 class="filter_title">Cores</h3>
 
 
           <form class="filter-colors">
@@ -209,12 +122,37 @@
               <input type="checkbox" class="filtro-cor" name="color-5" id="color-5" value="Laranja">
               <label for="Laranja">Laranja</label>
             </div>
+            <div class="filter-colors-div">
+              <input type="checkbox" class="filtro-cor" name="color-6" id="color-6" value="Verde">
+              <label for="Laranja">Verde</label>
+            </div>
+            <div class="filter-colors-div">
+              <input type="checkbox" class="filtro-cor" name="color-7" id="color-7" value="Vermelho">
+              <label for="Laranja">Vermelho</label>
+            </div>
+            <div class="filter-colors-div">
+              <input type="checkbox" class="filtro-cor" name="color-8" id="color-8" value="Preto">
+              <label for="Laranja">Preto</label>
+            </div>
+            <div class="filter-colors-div">
+              <input type="checkbox" class="filtro-cor" name="color-9" id="color-9" value="Rosa">
+              <label for="Laranja">Rosa</label>
+            </div>
+            <div class="filter-colors-div">
+              <input type="checkbox" class="filtro-cor" name="color-10" id="color-10" value="Vinho">
+              <label for="Laranja">Vinho</label>
+            </div>
 
-         
+
 
           </form>
+          <button id="MobileTamanhosButton" class="buttonSetas">
+            <h3 class="filter_title">TAMANHOS</h3><svg width="20" height="15" viewBox="0 0 20 15" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 1L10 14L19 1.0135" stroke="#666666" stroke-linecap="round" />
+            </svg>
+          </button>
 
-          <h3 class="filter_title">TAMANHOS</h3>
 
           <div class="filter-tamanho">
             <button>P</button>
@@ -232,24 +170,28 @@
           </div>
         </section>
 
-        <h3 class="filter_title">FAIXA DE PREÇO</h3>
+        <button id="MobilePrecoButton" class="buttonSetas">
+          <h3 class="filter_title">FAIXA DE PREÇO</h3><svg width="20" height="15" viewBox="0 0 20 15" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 1L10 14L19 1.0135" stroke="#666666" stroke-linecap="round" />
+          </svg>
+        </button>
 
-
-        <form class="filter-colors">
+        <form class="filter-colors" id="filter-precoo">
           <div class="filter-colors-div">
-            <input type="checkbox" name="preco-1" id="preco-1" value="50">
+            <input type="checkbox" name="preco-1" id="preco-1" value="0-50">
             <label for="Amarelo">de R$0 até R$50</label>
           </div>
           <div class="filter-colors-div">
-            <input type="checkbox" name="preco-2" id="preco-2" value="150">
+            <input type="checkbox" name="preco-2" id="preco-2" value="51-150">
             <label for="Azul">de R$51 até R$150</label>
           </div>
           <div class="filter-colors-div">
-            <input type="checkbox" name="preco-3" id="preco-3" value="300">
+            <input type="checkbox" name="preco-3" id="preco-3" value="151-300">
             <label for="Branco">de R$151 até R$300</label>
           </div>
           <div class="filter-colors-div">
-            <input type="checkbox" name="preco-4" id="preco-4" value="500">
+            <input type="checkbox" name="preco-4" id="preco-4" value="301-500">
             <label for="Cinza">de R$301 até R$500</label>
           </div>
           <div class="filter-colors-div">
@@ -257,19 +199,125 @@
             <label for="Laranja">a partir de R$ 01</label>
           </div>
 
-          <div></div>
-
         </form>
 
       </aside>
-
-
-      <!---BOXS Que estão sendo puxado pela API-->
-      <div class="shop-content">
-
-      </div>
-      </section>
     </div>
+  </div>
+
+  <div class="produtos">
+    <aside class="esconder-mobile">
+      <section class="shop container">
+        <h3 class="filter_title">Cores</h3>
+
+
+        <form class="filter-colors">
+          <div class="filter-colors-div">
+            <input type="checkbox" class="filtro-cor" name="color-1" id="color-1" value="Amarelo">
+            <label for="Amarelo">Amarelo</label>
+          </div>
+          <div class="filter-colors-div">
+            <input type="checkbox" class="filtro-cor" name="color-2" id="color-2" value="Azul">
+            <label for="Azul">Azul</label>
+          </div>
+          <div class="filter-colors-div">
+            <input type="checkbox" class="filtro-cor" name="color-3" id="color-3" value="Branco">
+            <label for="Branco">Branco</label>
+          </div>
+          <div class="filter-colors-div">
+            <input type="checkbox" class="filtro-cor" name="color-4" id="color-4" value="Cinza">
+            <label for="Cinza">Cinza</label>
+          </div>
+          <div class="filter-colors-div">
+            <input type="checkbox" class="filtro-cor" name="color-5" id="color-5" value="Laranja">
+            <label for="Laranja">Laranja</label>
+          </div>
+          <div class="filter-colors-div filtre-oculto">
+            <input type="checkbox" class="filtro-cor" name="color-6" id="color-6" value="Verde">
+            <label for="Laranja">Verde</label>
+          </div>
+          <div class="filter-colors-div filtre-oculto">
+            <input type="checkbox" class="filtro-cor" name="color-7" id="color-7" value="Vermelho">
+            <label for="Laranja">Vermelho</label>
+          </div>
+          <div class="filter-colors-div filtre-oculto">
+            <input type="checkbox" class="filtro-cor" name="color-8" id="color-8" value="Preto">
+            <label for="Laranja">Preto</label>
+          </div>
+          <div class="filter-colors-div filtre-oculto">
+            <input type="checkbox" class="filtro-cor" name="color-9" id="color-9" value="Rosa">
+            <label for="Laranja">Rosa</label>
+          </div>
+          <div class="filter-colors-div filtre-oculto">
+            <input type="checkbox" class="filtro-cor" name="color-10" id="color-10" value="Vinho">
+            <label for="Laranja">Vinho</label>
+          </div>
+
+          <div id="ver-cores">Ver todas as cores <svg width="9" height="7" viewBox="0 0 9 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 1L4.5 6L8 1.00519" stroke="#666666" stroke-linecap="round"/>
+            </svg></div>
+        
+
+
+
+        </form>
+
+        <h3 class="filter_title">TAMANHOS</h3>
+
+        <div class="filter-tamanho">
+          <button>P</button>
+          <button>M</button>
+          <button>G</button>
+          <button>GG</button>
+          <button>U</button>
+          <button>36</button>
+          <button>38</button>
+          <button>40</button>
+          <button>42</button>
+          <button>44</button>
+          <button>46</button>
+
+        </div>
+      </section>
+
+      <h3 class="filter_title">FAIXA DE PREÇO</h3>
+
+
+      <form class="filter-colors">
+        <div class="filter-colors-div">
+          <input type="checkbox" name="preco-1" id="preco-1-desk" value="0-50">
+          <label for="Amarelo">de R$0 até R$50</label>
+        </div>
+        <div class="filter-colors-div">
+          <input type="checkbox" name="preco-2" id="preco-2-desk" value="51-150">
+          <label for="Azul">de R$51 até R$150</label>
+        </div>
+        <div class="filter-colors-div">
+          <input type="checkbox" name="preco-3" id="preco-3-desk" value="151-300">
+          <label for="Branco">de R$151 até R$300</label>
+        </div>
+        <div class="filter-colors-div">
+          <input type="checkbox" name="preco-4" id="preco-4-desk" value="301-500">
+          <label for="Cinza">de R$301 até R$500</label>
+        </div>
+        <div class="filter-colors-div">
+          <input type="checkbox" name="preco-5" id="preco-5-desk" value="01">
+          <label for="Laranja">a partir de R$ 01</label>
+        </div>
+
+        <div></div>
+
+      </form>
+
+    </aside>
+
+
+    <!---BOXS Que estão sendo puxado pela API-->
+    <div class="shop-content">
+
+    </div>
+    </section>
+  </div>
   </div>
   </div>
   <div class="carregar-mais">

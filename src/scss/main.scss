@@ -232,6 +232,7 @@ aside {
 
 .filter-tamanho button {
   width: 30px;
+  height: 30px;
   margin: 5px;
   background: white;
   border: 1px solid #cbcbcb;
@@ -327,7 +328,7 @@ p {
 
 .carregar-mais {
   text-align: center;
-  margin: 43px 10px 40px 200px;
+  margin: 43px 70px 40px 200px;
 }
 
 #button-carregar-mais {
@@ -342,11 +343,30 @@ p {
   font-size: 14px;
 }
 
-.filtrarMobile{
+.filtrarMobile {
   display: none;
 }
-.filtrarMobileOrdenar{
+
+.filtrarMobileOrdenar {
   display: none;
+}
+
+.item-sacola button {
+  margin-left: 100px;
+  background: none;
+  border: 0;
+  font-size: 20px;
+}
+
+#ver-cores{
+  text-decoration: underline;
+  color: #666666;
+  font-family: 'Open Sans', sans-serif;
+  cursor: pointer;
+  margin: 10px 0 ;
+}
+.filtre-oculto{
+display: none;
 }
 
 /*Footer-rodapé */
@@ -363,12 +383,13 @@ span .rodapé {
 /*RESPONSIVE */
 @media (min-width:300px) and (max-width:700px) {
 
-  .esconder-mobile{
+  .esconder-mobile {
     display: none;
   }
+
   aside {
     width: 100%;
-}
+  }
 
   .product-box {
     width: 46%;
@@ -424,85 +445,96 @@ span .rodapé {
   }
 
 
-#ExcluideProduto {
-  background: unset;
-  border: 0;
-  font-size: 20px;
-  padding-left: 100px;
-}
-.filtrarMobile{
-  visibility: hidden;
-  background: rgb(255, 255, 255);
-  position: fixed;
-  left: 0;
-  top: 0px;
-  padding-top: 9px;
-  height: 100vh;
-  width: 100%;
-  transition: all 0.5s ease;
-  overflow-x: hidden;
-  overflow-y: scroll;
-  z-index: 1000;
-  display: block;
-}
-.filter-tamanho button {
-  width: 50px;
-  height: 50px;
-  margin: 10px 10px 10px 27px;
-  background: white;
-  border: 1px solid #cbcbcb;
-  color: #cbcbcb;
-  cursor: pointer;
-}
-.filter_title {
-  font-family: "Open Sans", sans-serif;
-  margin: 10px 10px;
-  font-size: 20px;
-}
-.filter-colors {
-  display: flex;
-  flex-direction: column;
-  margin: 0 30px 10px;
-}
-.filter-colors div{
-  padding-bottom: 15px;
-}
-.filter-tamanho{
-  padding-bottom: 10px;
-}
-.closeFiltroMobile{
-  display: flex;
-  justify-content: space-between;
-  padding: 20px 30px;
-  align-items: center;
-  border-bottom: 1px solid #8c8c8c;
-  font-family: "Open Sans", sans-serif;
-  letter-spacing: 3px;
-  color:  #8c8c8c;
-}
-#closeMobile{
-  background: none;
-  border: 0;
-  font-size: 25px;
-}
-.buttonSetas{
-  border: 0;
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 10px;
-  background: none;  
-}
-.filter-colors {
-  display: flex;
-  flex-direction: column;
-  margin: 0 30px 10px;
-  visibility: hidden;
-  height: 0;
-}
-.filtrarMobileOrdenar{
-  visibility: hidden;
+  #ExcluideProduto {
+    background: unset;
+    border: 0;
+    font-size: 20px;
+    padding-left: 100px;
+  }
+
+  .filtrarMobile {
+    visibility: hidden;
+    background: rgb(255, 255, 255);
+    position: fixed;
+    left: 0;
+    top: 0px;
+    padding-top: 9px;
+    height: 100vh;
+    width: 100%;
+    transition: all 0.5s ease;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    z-index: 1000;
+    display: block;
+  }
+
+  .filter-tamanho button {
+    width: 50px;
+    height: 50px;
+    margin: 10px 10px 10px 27px;
+    background: white;
+    border: 1px solid #cbcbcb;
+    color: #cbcbcb;
+    cursor: pointer;
+  }
+
+  .filter_title {
+    font-family: "Open Sans", sans-serif;
+    margin: 10px 10px;
+    font-size: 20px;
+  }
+
+  .filter-colors {
+    display: flex;
+    flex-direction: column;
+    margin: 0 30px 10px;
+  }
+
+  .filter-colors div {
+    padding-bottom: 15px;
+  }
+
+  .filter-tamanho {
+    padding-bottom: 10px;
+  }
+
+  .closeFiltroMobile {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 30px;
+    align-items: center;
+    border-bottom: 1px solid #8c8c8c;
+    font-family: "Open Sans", sans-serif;
+    letter-spacing: 3px;
+    color: #8c8c8c;
+  }
+
+  #closeMobile {
+    background: none;
+    border: 0;
+    font-size: 25px;
+  }
+
+  .buttonSetas {
+    border: 0;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    background: none;
+  }
+
+  .filter-colors {
+    display: flex;
+    flex-direction: column;
+    margin: 0 30px 10px;
+    visibility: hidden;
+    height: 0;
+  }
+
+  .filtrarMobileOrdenar {
+    visibility: hidden;
     background: white;
     position: fixed;
     right: 0;
@@ -515,32 +547,41 @@ span .rodapé {
     overflow-y: scroll;
     z-index: 1000;
     display: block;
-}
-.closeFiltroMobilee{
-  display: flex;
-  justify-content: space-between;
-  padding: 20px 30px;
-  align-items: center;
-  border-bottom: 1px solid #8c8c8c;
-  font-family: "Open Sans", sans-serif;
-  letter-spacing: 3px;
-  color:  #8c8c8c;
-}
-#closeMobilee{
-  background: none;
-  border: 0;
-  font-size: 25px;
-}
-.FiltroOrdernaar{
-padding: 20px;
-}
-.FiltroOrdernaar div{
-  padding-bottom: 20px;
-  font-family: "Open Sans", sans-serif;
-  margin: 10px 10px;
-  font-size: 20px;
-}
-.text-Ordernar{
-  padding-top: 10px;
-}
+  }
+
+  .closeFiltroMobilee {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 30px;
+    align-items: center;
+    border-bottom: 1px solid #8c8c8c;
+    font-family: "Open Sans", sans-serif;
+    letter-spacing: 3px;
+    color: #8c8c8c;
+  }
+
+  #closeMobilee {
+    background: none;
+    border: 0;
+    font-size: 25px;
+  }
+
+  .FiltroOrdernaar {
+    padding: 20px;
+  }
+
+  .FiltroOrdernaar div {
+    padding-bottom: 20px;
+    font-family: "Open Sans", sans-serif;
+    margin: 10px 10px;
+    font-size: 20px;
+  }
+
+  .FiltroOrdernaar div.active {
+    color: #3ec1d7;
+  }
+
+  .text-Ordernar {
+    padding-top: 10px;
+  }
 }
